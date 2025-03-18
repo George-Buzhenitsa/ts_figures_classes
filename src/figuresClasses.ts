@@ -14,11 +14,11 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('Invalid Value');
+      throw new Error('Value cannot be 0 or less');
     }
 
     if (a >= b + c || b >= a + c || c >= a + b) {
-      throw new Error('Invalid Value');
+      throw new Error('The longest side is too big');
     }
   }
 
@@ -40,7 +40,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (radius <= 0) {
-      throw new Error('Invalid Value');
+      throw new Error('Value cannot be 0 or less');
     }
   }
 
@@ -60,7 +60,7 @@ export class Rectangle implements Figure {
     public length: number,
   ) {
     if (width <= 0 || length <= 0) {
-      throw new Error('Invalid Value');
+      throw new Error('Value cannot be 0 or less');
     }
   }
 
